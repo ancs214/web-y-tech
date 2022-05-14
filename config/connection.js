@@ -13,3 +13,24 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 
 
 module.exports = sequelize;
+
+
+
+
+
+
+
+
+//for testing sequelize connection to database, run node config/connection.js
+
+// sequelize
+//   .authenticate()
+//   .then(() => {
+//     console.log('Connection has been established successfully.');
+//   })
+//   .catch(err => {
+//     console.error('Unable to connect to the database:', err);
+//   });
+
+
+
