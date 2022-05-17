@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
+const sequelize = require('../../config/connection')
 
 //Get all posts  -  api/posts
 router.get('/', (req, res) => {
@@ -10,8 +11,7 @@ router.get('/', (req, res) => {
             'id',
             'post_content',
             'title',
-            'created_at',
-            'post_user_id'
+            'created_at'
         ],
         include: [
             // include the Comment model
@@ -49,8 +49,7 @@ router.get('/:id', withAuth, (req, res) => {
             'id',
             'post_content',
             'title',
-            'created_at',
-            'post_user_id'
+            'created_at'
         ],
         include: [
             // include the Comment model
@@ -84,7 +83,7 @@ router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
         post_content: req.body.post_content,
-        post_user_id: req.session.user_id
+        post_id: req.session.user_id
     })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
