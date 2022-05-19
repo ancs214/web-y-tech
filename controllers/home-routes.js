@@ -37,6 +37,7 @@ router.get('/', (req, res) => {
             //map array and serialize data
             const posts = dbPostData.map(post => post.get({ plain: true }));
             //we take that array and add it to an object to pass into the template
+            // console.log(posts);
             res.render('homepage', { 
               posts,
               loggedIn: req.session.loggedIn 
