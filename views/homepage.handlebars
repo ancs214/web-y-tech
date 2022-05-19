@@ -1,19 +1,20 @@
-
+  <ol class="post-list">
   {{#each posts as |post|}}
-  <ol class="post-list"></ol>
-  
-    <li>
-    <article class="post">
+  <li>
+ <article class="post">
       <div class="title">
-        <a href="{{post.content}}" target="_blank">{{post.title}}</a>
-        <span>({{post.content}})</span>
+        <a href="/post/{{id}}">{{post.title}}</a>
+        <div>{{created_at}}</div>
+        {{!-- <div>
+          {{post.post_content}}
+        </div> --}}
       </div>
       <div>
         <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
       </div>
     </article>
+
   </li>
-  
+     {{/each}}
 </ol>
 
-  {{/each}}
