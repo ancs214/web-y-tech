@@ -1,0 +1,34 @@
+<ol>
+    {{#each posts as |post|}}
+    {{!-- {{#each posts as |post|}} --}}
+     <li>
+    <article class="post">
+      <div class="title">
+        <a href="/single-post">{{post.title}}</a>
+        <span>{{post.content}}</span>
+      </div>
+      <div class="meta">
+        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+      </div>
+    </article>
+  </li>
+    {{/each}}
+  </ol>
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">Add Comment</button>
+  </div>
+</form>
+{{/if}}
+
+{{!-- {{> comments post.comments}} --}}
+
+{{!-- {{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+{{/if}} --}}

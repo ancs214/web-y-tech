@@ -20,17 +20,13 @@
   <h2>Your Blog Posts</h2>
   <ol>
     {{#each posts as |post|}}
-    {{!-- {{#each posts as |post|}} --}}
      <li>
     <article class="post">
       <div class="title">
-        <a href="{{post.content}}" target="_blank">{{post.title}}</a>
-        <span>({{post.content}})</span>
+        <a href="/single-post">{{post.title}}</a>
+        <span>{{post.content}}</span>
       </div>
       <div class="meta">
-        {{!-- {{like_count}} by {{user.username}} on
-        {{created_at}} --}}
-        |
         <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
       </div>
     </article>
