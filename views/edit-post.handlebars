@@ -1,19 +1,21 @@
 
-{{!-- {{#each posts as |post|}} --}}
+
 <form class="edit-form">
   <div>
-    <textarea name="blog-title" id="blog-title"> {{post.title}}</textarea> 
+    <textarea id="blog-title"> {{post.title}}</textarea> 
   </div>
   <div>
-    <textarea name="blog-content" id="blog-content">{{post.post_content}}</textarea>
+    <textarea id="blog-content">{{post.post_content}}</textarea>
   </div>
 
   <div>
     <button type="submit" class="edit-btn">Update Blog Post</button>
-     <button type="submit" class="delete-btn">Delete</button>
+  </div>
+  <div>
+     <button type="button" class="delete-btn">Delete</button>
   </div>
 </form>
-{{!-- {{/each}} --}}
+
 
 
 

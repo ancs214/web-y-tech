@@ -60,6 +60,11 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
 
+//SIGNUP PAGE
+router.get('/signup', (req, res) => {
+  res.render('signup');
+})
+
 
   //GET SINGLE POST PAGE
   router.get('/post/:id', (req, res) => {
