@@ -1,37 +1,20 @@
-<article class="post">
-      <div class="title">
-        <h2>{{post.title}}</h2>
-        <div>{{post.post_content}}</div>
-      </div>
-      <div class="meta">
-        <a href="/post/{{id}}">{{post.comments.length}} comment(s)</a>
-        <span>{{post.created_at}}</span>
-      </div>
-    </article>
 
-{{#if loggedIn}}
-<form class="comment-form">
+{{!-- {{#each posts as |post|}} --}}
+<form class="edit-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="blog-title" id="blog-title"> {{post.title}}</textarea> 
+  </div>
+  <div>
+    <textarea name="blog-content" id="blog-content">{{post.post_content}}</textarea>
   </div>
 
   <div>
-    <button type="submit">Add Comment</button>
+    <button type="submit" class="edit-btn">Update Blog Post</button>
+     <button type="submit" class="delete-btn">Delete</button>
   </div>
 </form>
-{{/if}}
+{{!-- {{/each}} --}}
 
-<div class="comments">
-  {{#each post.comment}}
-  <section class="comment">
-    <div class="meta">
-      {{user.username}} on {{created_at}}
-    </div>
-   
-  </section>
-  {{/each}}
-</div>
 
-{{!-- {{#if loggedIn}}
-<script src="/javascript/comment.js"></script>
-{{/if}} --}}
+
+<script src="/javascript/edit-post.js"></script>
