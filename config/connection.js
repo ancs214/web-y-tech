@@ -3,6 +3,8 @@ const Sequelize = require('sequelize');
 
 require('dotenv').config();
 
+let sequelize; 
+
 //create connection to our mysql database
 //use dotenv environment variables instead of real values
 if(process.env.JAWSDB_URL) {
