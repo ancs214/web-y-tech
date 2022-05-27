@@ -2,6 +2,9 @@
   "name": "web-y-tech",
   "version": "1.0.0",
   "description": "A tech blog where developers can publish, edit, and delete blog posts, as well as comment on other user's posts.",
+  "engines": {
+    "node": "16.14.2"
+  },
   "main": "server.js",
   "scripts": {
     "test": "jest",
